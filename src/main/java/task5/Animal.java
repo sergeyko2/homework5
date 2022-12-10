@@ -1,14 +1,13 @@
 package task5;
 
-public class Animal {
+public abstract class Animal {
 
     private String name;
 
-    public String run();
+    public abstract String run(double x);
+    public abstract String swim(double x);
 
-    public String swim();
-
-    // getter-setter
+// getter-setter
 
     public String getName() {
         return name;
@@ -17,4 +16,6 @@ public class Animal {
     public void setName(String name) {
         this.name = name;
     }
+
+
 }
