@@ -26,8 +26,6 @@ public class Main {
 
     private static void inputCat() {
         Cat cat = new Cat(getName());
-        Animal.setCountAnimal(Animal.getCountAnimal() + 1);
-        Cat.setCountCat(Cat.getCountCat() + 1);
         System.out.println("1 - Run\n2 - Swim");
         int key = scan.nextInt();
         if (key == 1) System.out.println(cat.run(getDistance()));
@@ -37,8 +35,6 @@ public class Main {
 
     private static void inputDog() {
         Dog dog = new Dog(getName());
-        Animal.setCountAnimal(Animal.getCountAnimal() + 1);
-        Dog.setCountDog(Dog.getCountDog() + 1);
         System.out.println("1 - Run\n2 - Swim");
         int key = scan.nextInt();
         if (key == 1) System.out.println(dog.run(getDistance()));

@@ -7,16 +7,14 @@ public class Cat extends Animal {
 
     public Cat(String name) {
         super.setName(name);
-    }
+        Animal.setCountAnimal(Animal.getCountAnimal() + 1);
+        countCat += 1;
+        }
 
     public String run(double x) {
-        String only = "";
-        if (x >= 200) {
-            x = 200;
-            only = " only";
-        }
+        if (x >= 200) x = 200;
         if (x < 0) x = 0;
-        return "Cat " + super.getName() + only + " ran " + x + "m";
+        return "Cat " + super.getName() + " ran " + x + "m";
     }
 
     public String swim(double x) {
