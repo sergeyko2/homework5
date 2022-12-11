@@ -24,7 +24,6 @@ public class Main {
         if (key != (1 | 2)) exitApp();
     }
 
-
     private static void inputCat() {
         Cat cat = new Cat(getName());
         Animal.setCountAnimal(Animal.getCountAnimal() + 1);
@@ -63,5 +62,4 @@ public class Main {
                 + Cat.getCountCat() +"\nTotal dogs: " + Dog.getCountDog());
         System.exit(0);
     }
-
 }

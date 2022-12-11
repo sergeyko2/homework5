@@ -5,7 +5,7 @@ public abstract class Animal {
     private String name;
 
     // Var for calculate total animals
-    static private int countAnimal;
+    private static int countAnimal;
 
     public abstract String run(double x);
     public abstract String swim(double x);

@@ -3,7 +3,7 @@ package task5;
 public class Cat extends Animal {
 
     // Var for calculate total cat
-    static private int countCat;
+    private static int countCat;
 
     public Cat(String name) {
         super.setName(name);
