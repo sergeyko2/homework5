@@ -8,7 +8,7 @@ public class Cat extends Animal {
     public Cat(String name) {
         super.setName(name);
         Animal.setCountAnimal(Animal.getCountAnimal() + 1);
-        countCat += 1;
+        Cat.setCountCat(Cat.getCountCat() + 1);
         }
 
     public String run(double x) {
