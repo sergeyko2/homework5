@@ -4,10 +4,13 @@ public abstract class Animal {
 
     private String name;
 
+    // Var for calculate total animals
+    static private int countAnimal;
+
     public abstract String run(double x);
     public abstract String swim(double x);
 
-// getter-setter
+    // getter-setter
 
     public String getName() {
         return name;
@@ -17,5 +20,11 @@ public abstract class Animal {
         this.name = name;
     }
 
+    public static int getCountAnimal() {
+        return countAnimal;
+    }
 
+    public static void setCountAnimal(int countAnimal) {
+        Animal.countAnimal = countAnimal;
+    }
 }

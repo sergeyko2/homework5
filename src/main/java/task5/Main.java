@@ -21,11 +21,14 @@ public class Main {
         int key = scan.nextInt();
         if (key == 1) inputCat();
         if (key == 2) inputDog();
-        if (key != (1 | 2)) System.exit(0);
+        if (key != (1 | 2)) exitApp();
     }
+
 
     private static void inputCat() {
         Cat cat = new Cat(getName());
+        Animal.setCountAnimal(Animal.getCountAnimal() + 1);
+        Cat.setCountCat(Cat.getCountCat() + 1);
         System.out.println("1 - Run\n2 - Swim");
         int key = scan.nextInt();
         if (key == 1) System.out.println(cat.run(getDistance()));
@@ -35,6 +38,8 @@ public class Main {
 
     private static void inputDog() {
         Dog dog = new Dog(getName());
+        Animal.setCountAnimal(Animal.getCountAnimal() + 1);
+        Dog.setCountDog(Dog.getCountDog() + 1);
         System.out.println("1 - Run\n2 - Swim");
         int key = scan.nextInt();
         if (key == 1) System.out.println(dog.run(getDistance()));
@@ -51,4 +56,12 @@ public class Main {
         System.out.print("Distance? ");
         return scan.nextDouble();
     }
+
+    private static void exitApp() {
+        System.out.println("--------------------------\nTotal animals: "
+                + Animal.getCountAnimal() + "\nTotal cats: "
+                + Cat.getCountCat() +"\nTotal dogs: " + Dog.getCountDog());
+        System.exit(0);
+    }
+
 }

@@ -2,6 +2,9 @@ package task5;
 
 public class Dog extends Animal {
 
+    // Var for calculate total dog
+    static private int countDog;
+
     public Dog(String name) {
         super.setName(name);
     }
@@ -24,5 +27,13 @@ public class Dog extends Animal {
         }
         if (x < 0) x = 0;
         return "Dog " + super.getName() + only + " swims " + x + "m";
+    }
+
+    public static int getCountDog() {
+        return countDog;
+    }
+
+    public static void setCountDog(int countDog) {
+        Dog.countDog = countDog;
     }
 }

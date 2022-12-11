@@ -2,6 +2,9 @@ package task5;
 
 public class Cat extends Animal {
 
+    // Var for calculate total cat
+    static private int countCat;
+
     public Cat(String name) {
         super.setName(name);
     }
@@ -18,5 +21,13 @@ public class Cat extends Animal {
 
     public String swim(double x) {
         return "Cat " + super.getName() + " does not swims!";
+    }
+
+    public static int getCountCat() {
+        return countCat;
+    }
+
+    public static void setCountCat(int countCat) {
+        Cat.countCat = countCat;
     }
 }
