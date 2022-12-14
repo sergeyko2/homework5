@@ -1,12 +1,14 @@
 package task5;
 
-public class Animal {
+public abstract class Animal {
 
     private String name;
 
-    public String run();
+    // Var for calculate total animals
+    private static int countAnimal;
 
-    public String swim();
+    public abstract String run(double x);
+    public abstract String swim(double x);
 
     // getter-setter
 
@@ -16,5 +18,13 @@ public class Animal {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public static int getCountAnimal() {
+        return countAnimal;
+    }
+
+    public static void setCountAnimal(int countAnimal) {
+        Animal.countAnimal = countAnimal;
     }
 }
